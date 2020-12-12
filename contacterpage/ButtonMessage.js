@@ -28,7 +28,7 @@ const ButtonMessage = () => {
                     style={styles.userIconTwo} 
                     size={30}
                     color="orange"
-                    onPress={() => {}}
+                    onPress={(message)}
                     />
             </View>
             <View>

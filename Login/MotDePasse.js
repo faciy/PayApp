@@ -6,17 +6,17 @@ import {
     TouchableOpacity
 } from 'react-native';
 
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 const MotDePasse = () => {
 
-    // const navigation = useNavigation();
+    const navigation = useNavigation();
 
-    // const PassPage = ()=> { navigation.navigate("PasswordPage")}
+    const PassPage = ()=> { navigation.navigate("PasswordPage")}
 
     return (
         <View style={styles.forget}>
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity onPress={(PassPage)}>
                 <Text style={styles.mdp}>Mot de passe oublié ?</Text>
             </TouchableOpacity>
         </View>

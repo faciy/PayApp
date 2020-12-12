@@ -6,7 +6,7 @@ import {
     ImageBackground,
 } from 'react-native';
 
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import bg from '../assets/images/bg.png';
 import YvesBoah from '../assets/images/YvesBoah.jpg'
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -17,7 +17,7 @@ import { IconButton, Caption, Badge, FAB, Portal, Provider} from 'react-native-p
 import ImagePicker from 'react-native-image-picker';
 
 
-const Profil =  ()=> {
+const Profil =  ({navigation: { navigate  }})=> {
 // button plus
 const [profil, setProfil] = React.useState({ open: false });
 
@@ -50,9 +50,9 @@ const selectImage = async () =>{
     });
 }
 
-// const navigation = useNavigation();
+const navigation = useNavigation();
 
-// const Back = ()=> { navigation.goBack()}
+const Back = ()=> { navigation.goBack()}
 
 
     return (
@@ -65,7 +65,7 @@ const selectImage = async () =>{
                                     name="arrow-back"
                                     color='white'
                                     size={25}
-                                    onPress={() => {}}
+                                    onPress={(Back)}
                                     />
                                 </Button>
                             </Left>
@@ -142,7 +142,7 @@ const selectImage = async () =>{
                   {
                     icon: 'lock',
                     label: 'Changer Mot de Passe',
-                    // onPress: () => navigate('ResetAdmin'),
+                    onPress: () => navigate('ResetAdmin'),
                   },
                 ]}
                 onStateChange={onStateChange}

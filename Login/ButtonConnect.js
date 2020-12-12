@@ -5,17 +5,17 @@ import {
     Text,
     TouchableOpacity
 } from 'react-native';
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 const ButtonConnect = () => {
 
-//   const navigation = useNavigation();
+  const navigation = useNavigation();
 
-    // const btnconnect = ()=> { navigation.navigate("ShoppingPage")}
+    const btnconnect = ()=> { navigation.navigate("ShoppingPage")}
     
     return(
         <View style={styles.btn}>
-            <TouchableOpacity style={styles.button} onPress={() => {}}>
+            <TouchableOpacity style={styles.button} onPress={(btnconnect)}>
             <Text style={styles.btnLogin}>Se connecter  </Text>
             </TouchableOpacity>
         </View>  

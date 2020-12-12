@@ -10,7 +10,7 @@ import FormOne from '../resetAdmin/FormOne';
 import FormTwo from '../resetAdmin/FormTwo';
 import ResetDelete from './ResetDelete';
 
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 import bg from '../assets/images/bg.png';
 
@@ -22,9 +22,9 @@ import {Left, Body, Button, Title } from 'native-base';
 const ResetAdmin = () => {
 
      
-    // const navigation = useNavigation();
+    const navigation = useNavigation();
 
-    // const Back = ()=> { navigation.goBack()}
+    const Back = ()=> { navigation.goBack()}
 
 
     return (
@@ -38,7 +38,7 @@ const ResetAdmin = () => {
                                     name="arrow-back"
                                     color='white'
                                     size={25}
-                                    onPress={() => {}}
+                                    onPress={(Back)}
                                     />
                                 </Button>
                             </Left>

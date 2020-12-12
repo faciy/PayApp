@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, ScrollView} from 'react-native'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import { Card} from 'react-native-paper';
 
-const Today = () =>{
+const Week = () =>{
     return(
     <ScrollView>
 
@@ -109,7 +109,7 @@ const Today = () =>{
     )
 }
 
-export default Today;
+export default Week;
 
 const styles = StyleSheet.create({
     container: {

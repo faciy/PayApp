@@ -5,17 +5,17 @@ import {
     Text,
     TouchableOpacity
 } from 'react-native';
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 const Contacter = () => {
     
-    // const navigation = useNavigation();
+    const navigation = useNavigation();
 
-    // const contactbtn = ()=> { navigation.navigate("ContacterPage")}
+    const contactbtn = ()=> { navigation.navigate("ContacterPage")}
 
     return(
         <View style={styles.contact}>     
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity onPress={(contactbtn)}>
                 <Text style={styles.support}>Contacter le support</Text>
             </TouchableOpacity> 
         </View>

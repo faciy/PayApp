@@ -3,8 +3,13 @@ import {
     View, 
     StyleSheet,
     Image,
-    Text
+    Text,
+    ScrollView
 } from 'react-native';
+
+import { useNavigation } from '@react-navigation/native';
+
+import { Header, Left, Body, Button, Icon, Title } from 'native-base';
 import logo from '../assets/images/zip-icon-resized.png'
 import Appel from './Appel';
 import ButtonAppel from './ButtonAppel';
@@ -14,12 +19,30 @@ import Email from './Email'
 import ButtonEmail from './ButtonEmail';
 
 
+
+
 const ContatcterPage = () => {
+
+  const navigation = useNavigation();
+
+  const Back = ()=> { navigation.goBack()}
     
     return (
-       
             <View style={styles.container}>
-               {/* <Header/> */}
+                    <Header style={styles.header}>
+                      <Left>
+                        <Button transparent>
+                          <Icon 
+                          name='close'
+                          onPress={(Back)}
+                          />
+                        </Button>
+                      </Left>
+                      <Body>
+                        <Title>NOUS CONTACTEZ</Title>
+                      </Body>
+                    </Header>
+                  
                 <View style={styles.logo}>
                     <Image 
                     style={styles.logoZip}
@@ -28,9 +51,9 @@ const ContatcterPage = () => {
                 </View>
                 <View style={styles.text}>
                     <Text style={styles.textlieu}> 
-                    <Text style={styles.ziptext}>PAY COTE D'IVOIRE</Text>
-                    , Abidjan Macory , 
-                    224 logements, Appartement 200
+                    <Text style={styles.ziptext}>ZIP COTE D'IVOIRE</Text>
+                    , Abidjan II plateaux Macaci, 
+                    246 logements, Appartement 235
                     </Text>
                 </View>
                 <Appel />
@@ -40,6 +63,7 @@ const ContatcterPage = () => {
                 <Email />
                 <ButtonEmail />
             </View>
+      
     );
 };
 
@@ -50,7 +74,9 @@ const styles = StyleSheet.create({
   container: {
       flex: 1,
       backgroundColor: '#fff',
-     
+  },
+  header:{
+    backgroundColor:'orange',
   },
   logo:{
     paddingVertical: 20,
@@ -58,15 +84,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logoZip:{
-      backgroundColor:'blue',
       width:100,
       height:100,   
   },
   ziptext:{
     fontWeight:'bold'
-  },
-  text:{
-    marginTop:20
   },
   textlieu:{
       textAlign:'center'

@@ -6,17 +6,17 @@ import {
     TouchableOpacity
 } from 'react-native';
 import Validate from './Validate';
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 const Delete = () => {
   
-//   const navigation = useNavigation();
+  const navigation = useNavigation();
 
-//   const btnDelete = ()=> { navigation.goBack()}
+  const btnDelete = ()=> { navigation.goBack()}
 
     return(
         <View style={styles.delete}>
-            <TouchableOpacity style={styles.button} onPress={() => {}}>
+            <TouchableOpacity style={styles.button} onPress={(btnDelete)}>
             <Text style={styles.btnDelete}>ANNULER</Text>
             </TouchableOpacity>
             <Validate />
