@@ -1,10 +1,14 @@
 import React from 'react'
 import {View, StyleSheet, Text, Image, FlatList, ScrollView} from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import {Badge} from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
 // import panneau from '../assets/images/panneau_orange.png'
 import Search from '../shoppingpage/Search'
 
 const EnCours = () =>{
+
+    const navigation = useNavigation();
 
     const data = [
         {id:1, 
@@ -59,6 +63,7 @@ const EnCours = () =>{
 
     const renderList = ((item) =>{
         return(
+        <TouchableOpacity onPress={() => navigation.navigate('CourseEnCours')}>
             <View style={styles.termine}>
                 <View style={styles.bloc}>
                      <Text style={styles.lieu}>{item.lieu}</Text>
@@ -71,6 +76,7 @@ const EnCours = () =>{
                     <Text style={styles.minOne}>{item.min}</Text>
                  </View>
             </View>
+        </TouchableOpacity>
         )
     });
 
@@ -96,16 +102,17 @@ export default EnCours;
 
 const styles = StyleSheet.create({
     container:{
-        // flex:1,
+        backgroundColor:'white',
+        flex:1,
     },
     bloc:{
-        marginLeft:80,
+        marginLeft:30,
         marginRight:30,
         flexDirection:'row',
         justifyContent:'space-between'
     },
     blocnew:{
-        marginLeft:80,
+        marginLeft:30,
         marginRight:30,
         marginTop:5,
         flexDirection:'row',
@@ -113,6 +120,7 @@ const styles = StyleSheet.create({
     },
     termine:{
         marginBottom:10,
+        marginTop:10,
     },
     badge:{
         position:'absolute',
@@ -123,7 +131,7 @@ const styles = StyleSheet.create({
     lieu:{
         fontWeight:'bold',
         fontSize:15,
-        // bottom:50,
+    // bottom:50,
     },
     prix:{
         fontWeight:'bold',
@@ -137,10 +145,9 @@ const styles = StyleSheet.create({
         fontSize:15,
         fontWeight:'bold',
         color:'grey',
-       
     },
     panneauOne:{
         position:'absolute',
         left:-70,
     },
-  });
+});

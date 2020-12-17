@@ -19,7 +19,7 @@ const Search = () => {
                  <Ionicons
                     style={styles.userIcon} 
                     name="search"
-                    color="#0092FF"
+                    color="green"
                     size={20}
                 />
                 <TextInput 
@@ -46,11 +46,13 @@ export default Search;
     flex:1,
     borderBottomWidth:2,
     borderBottomColor:'#B1B1B1',
-    paddingHorizontal:30,
+    marginRight:30,
+    marginLeft:30,
 },
 userIcon : {
     position: "absolute",
     top:16,
+    right:30,
 },
 text:{
     textAlign:'center',

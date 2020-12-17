@@ -10,13 +10,13 @@ import Fond from '../assets/images/Fond.png'
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import {Left, Body, Button, Title } from 'native-base';
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 const Chat = () => {
 
-    // const navigation = useNavigation();
+    const navigation = useNavigation();
 
-    // const Back = ()=> { navigation.goBack()}
+    const Back = ()=> { navigation.goBack()}
 
     return (
         <ImageBackground  style={styles.image}>
@@ -28,7 +28,7 @@ const Chat = () => {
                          name="arrow-back"
                          color='white'
                          size={25}
-                         onPress={() => {}}
+                         onPress={Back}
                         />
                     </Button>
                 </Left>

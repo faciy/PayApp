@@ -35,7 +35,7 @@ const DrawerContent = (props) => {
                         />
                     </View>
                     <View style={{marginTop:10}}>
-                        <Text style={styles.title}>KONE PANH</Text>
+                        <Text style={styles.title}>CHARLES OTH-NIEL</Text>
                         <Caption style={styles.caption}>SALARIE</Caption>
                     </View>
 
@@ -121,7 +121,7 @@ const DrawerContent = (props) => {
     caption: {
       fontSize: 14,
       textAlign:'center',
-      color:'#1E90FF'
+      color:'green'
     },
     drawerSection: {
       marginTop: 50,

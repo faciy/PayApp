@@ -5,6 +5,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 
+import MyTabBar from '../shoppingpage/MyTabBar'
+
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons'
@@ -16,6 +18,9 @@ import Login from '../Login/Login'
 import ContacterPage from '../contacterpage/ContacterPage'
 import PasswordPage from '../passwordpage/PasswordPage'
 import ShoppingPage from '../shoppingpage/ShoppingPage'
+
+import CourseFinish from '../courses/CourseFinish'
+import CourseEnCours from '../courses/CourseEnCours'
 
 import Profil from '../profilpage/Profil'
 import About from '../aboutpage/About'
@@ -36,6 +41,8 @@ const MyDrawer = () =>{
       <Drawer.Screen name="ShoppingPage" component={ShoppingPage}/>
       <Drawer.Screen name="Profil" component={Profil} />
       <Drawer.Screen name="ResetAdmin" component={ResetAdmin} />
+      <Drawer.Screen name="CourseFinish" component={CourseFinish} />
+      <Drawer.Screen name="CourseEnCours" component={CourseEnCours} />
       <Drawer.Screen name="About" component={About} />
       <Drawer.Screen name="ContacterPage" component={ContacterPage} />
       <Drawer.Screen name="Aide" component={Aide} />
@@ -48,7 +55,7 @@ const MyDrawer = () =>{
 const MyTabs = () => {
 
   return (
-    <Tab.Navigator
+    <Tab.Navigator tabBar={props => <MyTabBar {...props} />}
     >
       <Tab.Screen 
       name="Accueil" 

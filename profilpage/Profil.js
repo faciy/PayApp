@@ -232,7 +232,8 @@ const styles = StyleSheet.create({
       marginTop:150,
   },
   chiffre:{
-      marginRight:60,
+      marginRight:70,
+      top:-10,
       fontSize:20,
       backgroundColor:'green'
   },

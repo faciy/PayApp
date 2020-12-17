@@ -96,16 +96,17 @@ export default Autre;
 
 const styles = StyleSheet.create({
     container:{
-        // flex:1,
+        backgroundColor:'white',
+        flex:1,
     },
     bloc:{
-        marginLeft:80,
+        marginLeft:30,
         marginRight:30,
         flexDirection:'row',
         justifyContent:'space-between'
     },
     blocnew:{
-        marginLeft:80,
+        marginLeft:30,
         marginRight:30,
         marginTop:5,
         flexDirection:'row',
@@ -113,6 +114,7 @@ const styles = StyleSheet.create({
     },
     termine:{
         marginBottom:10,
+        marginTop:10,
     },
     badge:{
         position:'absolute',

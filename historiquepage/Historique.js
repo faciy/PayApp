@@ -39,8 +39,13 @@ const Historique = () => {
       activeTintColor: '#002FFF',
       style: { backgroundColor: '#B9B9B9' },
     }}>
-      <Tab.Screen name="Today" component={Today} />
-      <Tab.Screen name="Settings" component={Week} />
+      <Tab.Screen options={{
+        title:`Aujourd'hui` 
+      }} name="Today" component={Today} />
+      <Tab.Screen
+      options={{
+        title:`Semaine`
+      }} name="Settings" component={Week} />
     </Tab.Navigator>
     </View>
   );
