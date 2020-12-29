@@ -5,7 +5,7 @@ import {
     Text,
     Image
 } from 'react-native';
-import logo from '../assets/images/zip-icon-resized.png'
+import delivery from '../assets/images/food-delivery.png'
 
 import {Header, Left, Body, Button, Icon, Title } from 'native-base';
 import { useNavigation } from '@react-navigation/native';
@@ -24,7 +24,7 @@ const About = () => {
                       <Left>
                         <Button transparent>
                           <Icon 
-                          name='chevron-back-outline'
+                          name='close'
                           onPress={(Back)}
                           />
                         </Button>
@@ -36,8 +36,8 @@ const About = () => {
 
                 <View style={styles.logo}>
                     <Image 
-                    style={styles.logoZip}
-                    source={logo}
+                    style={styles.logoPay}
+                    source={delivery}
                     />
                 </View>
                 <View>
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   header:{
     backgroundColor:'orange',
   },
-  logoZip:{
+  logoPay:{
       width:100,
       height:100,   
   },

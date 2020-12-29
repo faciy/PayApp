@@ -1,8 +1,7 @@
 import React from "react";
 import {StyleSheet} from 'react-native'
-import { Container, Header, Content, Accordion } from "native-base";
-
-
+import { Container, Header, Content, Accordion,  Left, Body, Button, Icon, Title } from "native-base";
+import { useNavigation } from '@react-navigation/native';
 
 const dataArray = [
   { title: "Je veux modifier mon mot de passe", 
@@ -24,9 +23,26 @@ const dataArray = [
 
 
 const Aide = () => {
+
+  const navigation = useNavigation();
+
+  const Back = ()=> { navigation.goBack()}
+
     return (
       <Container style={styles.container}>
-        <Header style={styles.header} />
+            <Header style={styles.header}>
+                      <Left>
+                        <Button transparent>
+                          <Icon 
+                          name='close'
+                          onPress={(Back)}
+                          />
+                        </Button>
+                      </Left>
+                      <Body>
+                        <Title style={{left:50}}>AIDE</Title>
+                      </Body>
+            </Header>
         <Content style={styles.content}>
             <Accordion dataArray={dataArray} expanded={0}/>
         </Content>

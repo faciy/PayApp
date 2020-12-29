@@ -10,7 +10,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 
 import { Header, Left, Body, Button, Icon, Title } from 'native-base';
-import logo from '../assets/images/zip-icon-resized.png'
+import delivery from '../assets/images/food-delivery.png'
 import Appel from './Appel';
 import ButtonAppel from './ButtonAppel';
 import ButtonMessage from './ButtonMessage';
@@ -45,15 +45,15 @@ const ContatcterPage = () => {
                   
                 <View style={styles.logo}>
                     <Image 
-                    style={styles.logoZip}
-                    source={logo}
+                    style={styles.logoPay}
+                    source={delivery}
                     />
                 </View>
                 <View style={styles.text}>
                     <Text style={styles.textlieu}> 
-                    <Text style={styles.ziptext}>ZIP COTE D'IVOIRE</Text>
-                    , Abidjan II plateaux Macaci, 
-                    246 logements, Appartement 235
+                    <Text style={styles.ziptext}>PAY COTE D'IVOIRE</Text>
+                    , Abidjan Soleil 3, 
+                    Villa 252
                     </Text>
                 </View>
                 <Appel />
@@ -83,9 +83,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25,
     alignItems: 'center',
   },
-  logoZip:{
+  logoPay:{
       width:100,
-      height:100,   
+      height:100,  
   },
   ziptext:{
     fontWeight:'bold'

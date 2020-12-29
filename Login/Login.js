@@ -2,7 +2,8 @@ import React from 'react'
 import { 
     View, 
     StyleSheet,
-    ScrollView
+    ScrollView,
+    Image
 } from 'react-native';
 import Header from './Header'
 import Username from './Username'
@@ -10,12 +11,11 @@ import Password from './Password'
 import ButtonConnect from './ButtonConnect'
 import MotDePasse from './MotDePasse'
 import Contacter from './Contacter';
+import delivery from '../assets/images/food-delivery.png'
 
 
 const Login = () => {
 
-    
-    
     return (
        <ScrollView style={styles.scrollView}>
             <View style={styles.container}>
@@ -28,6 +28,12 @@ const Login = () => {
                     <MotDePasse />
                     <Contacter />
                     <ButtonConnect />
+                </View>
+                <View style={styles.logo}>
+                    <Image 
+                    style={styles.logoPay}
+                    source={delivery}
+                    />
                 </View>
             </View>
         </ScrollView>
@@ -49,6 +55,16 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: 'space-around',
       alignItems: 'center',
+  },
+  logo:{
+    paddingVertical: 20,
+    paddingHorizontal: 25,
+    alignItems: 'center',
+    marginTop:40,
+  },
+  logoPay:{
+      width:100,
+      height:100,  
   },
 
 

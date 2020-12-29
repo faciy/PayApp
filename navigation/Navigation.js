@@ -21,6 +21,7 @@ import ShoppingPage from '../shoppingpage/ShoppingPage'
 
 import CourseFinish from '../courses/CourseFinish'
 import CourseEnCours from '../courses/CourseEnCours'
+import CourseEnAttente from '../courses/CourseEnAttente'
 
 import Profil from '../profilpage/Profil'
 import About from '../aboutpage/About'
@@ -43,6 +44,7 @@ const MyDrawer = () =>{
       <Drawer.Screen name="ResetAdmin" component={ResetAdmin} />
       <Drawer.Screen name="CourseFinish" component={CourseFinish} />
       <Drawer.Screen name="CourseEnCours" component={CourseEnCours} />
+      <Drawer.Screen name="CourseEnAttente" component={CourseEnAttente} />
       <Drawer.Screen name="About" component={About} />
       <Drawer.Screen name="ContacterPage" component={ContacterPage} />
       <Drawer.Screen name="Aide" component={Aide} />

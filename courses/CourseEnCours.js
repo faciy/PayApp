@@ -1,15 +1,84 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, Text, ImageBackground, Image, TouchableOpacity } from 'react-native';
 import { Header, Left, Body, Button, Icon, Title } from 'native-base';
-// import bg from '../assets/images/bg.png';
-// import panneau from '../assets/images/panneau_orange.png'
 import { useNavigation } from '@react-navigation/native';
+import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
+import locationPin from './../assets/images/location-pin.png';
+import location from './../assets/images/location.png';
+
 
 const CourseEnCours = () => {
+
+    const region ={
+        latitude: 37.78825,
+        longitude: -122.4324,
+        latitudeDelta: 0.0922,
+        longitudeDelta: 0.0421,
+    }
 
     const navigation = useNavigation();
 
     const Back = ()=> { navigation.goBack()}
+
+    const departMarker = () => (
+        <Marker
+        coordinate={{
+            latitude: 37.3318456,
+            longitude: -122.0296002,
+        }}
+        >
+            <View
+                style={{
+                    height: 30,
+                    width: 30,
+                    borderRadius: 20,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    // backgroundColor: 'white'
+                }}
+            >
+                <View
+                    style={{
+                        height: 30,
+                        width: 30,
+                        borderRadius: 15,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        // backgroundColor: 'orange'
+                    }}
+                >
+                    <Image
+                        source={locationPin}
+                        style={{
+                            width: 25,
+                            height: 25,
+                            // tintColor: COLORS.white
+                        }}
+                    />
+                </View>
+            </View>
+        </Marker>
+    )
+
+    const destinationMarker = () => (
+        <Marker
+            coordinate={{
+                latitude: 37.771707, 
+                longitude: -122.4053769
+            }}
+            anchor={{ x: 0.5, y: 0.5 }}
+            flat={true}
+            // rotation={angle}
+        >
+            <Image
+                source={location}
+                style={{
+                    width: 40,
+                    height: 40
+                }}
+            />
+        </Marker>
+    )
 
     return (
       // Try setting `flexDirection` to `column`.
@@ -33,7 +102,25 @@ const CourseEnCours = () => {
             </ImageBackground>
         </View>
         <View style={styles.body}> 
-        
+            <View style={styles.containerMap}>
+                <MapView
+                provider={PROVIDER_GOOGLE}
+                initialRegion={region}
+                style={styles.map}
+                >
+                    {departMarker()}
+                    {destinationMarker()}
+                     {/* <MapView.Marker
+                    coordinate={{
+                        latitude: 37.3318456,
+                        longitude: -122.0296002,
+                    }}
+                    title="My Location"
+                    description="Here I am."
+                    /> */}
+                     
+                </MapView>
+            </View>
         </View>
         <View style={styles.footer}> 
             <View style={styles.distance}>
@@ -41,7 +128,6 @@ const CourseEnCours = () => {
                 <Text style={styles.prix}>2500 Fcfa</Text>
             </View>
             <View style={styles.bloc}>
-                {/* <Image source={panneau} style={styles.panneauOne} /> */}
                 <Text style={styles.lieu}>Cocody angré terminus 81</Text>
             </View>
             <View style={styles.blocnew}>
@@ -67,7 +153,7 @@ const styles = StyleSheet.create({
     },
     body:{
         flex:2.5, 
-        backgroundColor: 'skyblue',
+        // backgroundColor: 'skyblue',
         justifyContent: 'space-around',
         alignItems: 'center',
         marginBottom:-20
@@ -92,7 +178,7 @@ const styles = StyleSheet.create({
     },
     image: {
         flex: 1,
-        backgroundColor:'orange'
+        backgroundColor:'orange',
     },
     back:{
         color:'white',
@@ -147,17 +233,13 @@ const styles = StyleSheet.create({
         fontSize:15,
         color:'grey'
     },
-    panneauOne:{
-        position:'absolute',
-        left:-50,
-    },
     button: {
         marginTop:20,
         alignItems: "center",
         padding: 17,
         justifyContent:'space-between',
         borderRadius:5,
-        backgroundColor:'green',
+        backgroundColor:'orange',
         marginStart:20,
         marginEnd:20,
       },
@@ -166,9 +248,19 @@ const styles = StyleSheet.create({
         fontSize:15, 
         fontWeight:'bold',
       },
-
+      containerMap: {
+        ...StyleSheet.absoluteFillObject,
+        height: 300,
+        width: 400,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+      },
+      map: {
+        ...StyleSheet.absoluteFillObject,
+      },
 
 
 });
+
 
 export default CourseEnCours;

@@ -1,10 +1,13 @@
 import React from 'react'
-import {View, StyleSheet, Text, Image, FlatList, ScrollView} from 'react-native'
+import {View, StyleSheet, Text, Image, FlatList, TouchableOpacity} from 'react-native'
 import {Badge} from 'react-native-paper';
 // import panneau from '../assets/images/panneau_orange.png'
-import Search from '../shoppingpage/Search'
+import Search from '../shoppingpage/Search';
+import { useNavigation } from '@react-navigation/native';
 
 const Autre = () =>{
+
+    const navigation = useNavigation();
 
     const data = [
         {id:1, 
@@ -59,6 +62,7 @@ const Autre = () =>{
 
     const renderList = ((item) =>{
         return(
+        <TouchableOpacity onPress={() => navigation.navigate('CourseEnAttente')}>
             <View style={styles.termine}>
                 <View style={styles.bloc}>
                      <Text style={styles.lieu}>{item.lieu}</Text>
@@ -71,6 +75,7 @@ const Autre = () =>{
                     <Text style={styles.minOne}>{item.min}</Text>
                  </View>
             </View>
+        </TouchableOpacity>
         )
     });
 

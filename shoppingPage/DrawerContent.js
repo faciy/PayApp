@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, ImageBackground } from 'react-native';
 import user from '../assets/images/user.png'
-import nav from '../assets/images/nav.png'
+import game from '../assets/images/game.png'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 
@@ -18,12 +18,11 @@ import {
     DrawerItem,
     DrawerItemList,
   } from '@react-navigation/drawer';
-import { color } from 'react-native-reanimated';
 
 const DrawerContent = (props) => {
 
       return(
-        <ImageBackground source={nav} style={styles.ImgBackground}>
+        <ImageBackground source={game} style={styles.ImgBackground}>
         <View style={styles.container}>
         <DrawerContentScrollView  {...props}>
             <View style={styles.drawerContent}>
@@ -47,51 +46,51 @@ const DrawerContent = (props) => {
                         icon={({ size}) => (
                             <Icon 
                             name="account-outline" 
-                            color='white'
+                            color='black'
                             size={size}
                             />
                         )}
                         
-                      label={() => <Text style={{ color: 'white' }}>Mon Profil</Text>}
+                      label={() => <Text style={{ color: 'black' }}>Mon Profil</Text>}
                         onPress={() => {props.navigation.navigate('Profil')}}
                     />
                     <DrawerItem 
                         icon={({size}) => (
                             <Icon 
                             name="bookmark-outline" 
-                            color='white'
+                            color='black'
                             size={size}
                             />
                         )}
                        
-                      label={() => <Text style={{ color: 'white' }}>A Propos</Text>}
+                      label={() => <Text style={{ color: 'black' }}>A Propos</Text>}
                         onPress={() => {props.navigation.navigate('About')}}
                     />
                     <DrawerItem 
                         icon={({size}) => (
                             <Icon 
                             name="phone" 
-                            color='white'
+                            color='black'
                             size={size}
                             />
                         )}
-                      label={() => <Text style={{ color: 'white' }}>Nous Contacter</Text>}
+                      label={() => <Text style={{ color: 'black' }}>Nous Contacter</Text>}
                         onPress={() => {props.navigation.navigate('ContacterPage')}}
                     />
                     <DrawerItem 
                         icon={({size}) => (
                             <Icon 
                             name="head-question" 
-                            color='white'
+                            color='black'
                             size={size}
                             />
                         )}
                         
-                      label={() => <Text style={{ color: 'white' }}>Aide</Text>}
+                      label={() => <Text style={{ color: 'black' }}>Aide</Text>}
                         onPress={() => {props.navigation.navigate('Aide')}}
                     />
                     <DrawerItem
-                    label={() => <Text style={{ color: 'white' }}>Se déconnecter</Text>}
+                    label={() => <Text style={{ color: 'black' }}>Se déconnecter</Text>}
                     onPress={() => {props.navigation.navigate('Login')}}
                     />
                   
