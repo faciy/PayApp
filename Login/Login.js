@@ -1,6 +1,6 @@
 import React from 'react'
-import { 
-    View, 
+import {
+    View,
     StyleSheet,
     ScrollView,
     Image
@@ -17,7 +17,7 @@ import delivery from '../assets/images/food-delivery.png'
 const Login = () => {
 
     return (
-       <ScrollView style={styles.scrollView}>
+        <ScrollView style={styles.scrollView}>
             <View style={styles.container}>
                 <View style={styles.header}>
                     <Header />
@@ -30,9 +30,9 @@ const Login = () => {
                     <ButtonConnect />
                 </View>
                 <View style={styles.logo}>
-                    <Image 
-                    style={styles.logoPay}
-                    source={delivery}
+                    <Image
+                        style={styles.logoPay}
+                        source={delivery}
                     />
                 </View>
             </View>
@@ -44,28 +44,28 @@ const Login = () => {
 export default Login;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1, 
-    backgroundColor: '#fff'
-  },
-  scrollView:{
-    backgroundColor:'white',
-  },
-  header: {
-      flex: 1,
-      justifyContent: 'space-around',
-      alignItems: 'center',
-  },
-  logo:{
-    paddingVertical: 20,
-    paddingHorizontal: 25,
-    alignItems: 'center',
-    marginTop:40,
-  },
-  logoPay:{
-      width:100,
-      height:100,  
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#fff'
+    },
+    scrollView: {
+        backgroundColor: 'white',
+    },
+    header: {
+        flex: 1,
+        justifyContent: 'space-around',
+        alignItems: 'center',
+    },
+    logo: {
+        paddingVertical: 20,
+        paddingHorizontal: 25,
+        alignItems: 'center',
+        marginTop: 40,
+    },
+    logoPay: {
+        width: 100,
+        height: 100,
+    },
 
 
 });

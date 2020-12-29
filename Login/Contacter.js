@@ -1,6 +1,6 @@
 import React from 'react'
-import { 
-    View, 
+import {
+    View,
     StyleSheet,
     Text,
     TouchableOpacity
@@ -8,30 +8,30 @@ import {
 import { useNavigation } from '@react-navigation/native';
 
 const Contacter = () => {
-    
+
     const navigation = useNavigation();
 
-    const contactbtn = ()=> { navigation.navigate("ContacterPage")}
+    const contactbtn = () => { navigation.navigate("ContacterPage") }
 
-    return(
-        <View style={styles.contact}>     
+    return (
+        <View style={styles.contact}>
             <TouchableOpacity onPress={(contactbtn)}>
                 <Text style={styles.support}>Contacter le support</Text>
-            </TouchableOpacity> 
+            </TouchableOpacity>
         </View>
     );
 };
 
 export default Contacter;
 
- const styles = StyleSheet.create({    
-    contact:{
-        marginTop:30,
-        },
-        support: {
-            textAlign:'center',
-            color:'green',
-            fontSize:15,
-            fontWeight:'bold'
+const styles = StyleSheet.create({
+    contact: {
+        marginTop: 30,
     },
-  });
+    support: {
+        textAlign: 'center',
+        color: 'green',
+        fontSize: 15,
+        fontWeight: 'bold'
+    },
+});

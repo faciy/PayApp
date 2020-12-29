@@ -28,7 +28,8 @@ import About from '../aboutpage/About'
 import Aide from '../aidePage/Aide'
 import Chat from '../chatpage/Chat'
 import Plus from '../shoppingpage/Plus'
-import ResetAdmin from '../resetAdmin/ResetAdmin' 
+import ResetAdmin from '../resetAdmin/ResetAdmin'
+import SplashScreen from '../splash/SplashScreen' 
 
 import DrawerContent from '../shoppingpage/DrawerContent'
 
@@ -111,6 +112,13 @@ const Navigation = () => {
       <Stack.Navigator screenOptions={{
         headerShown:false
       }}>
+        <Stack.Screen 
+        name="SplashScreen" 
+        component={SplashScreen} 
+        options={{
+          title: ' ',
+          
+        }}/>
         <Stack.Screen 
         name="Login" 
         component={Login} 
