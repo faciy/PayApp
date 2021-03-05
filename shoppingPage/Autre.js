@@ -2,7 +2,7 @@ import React from 'react'
 import {View, StyleSheet, Text, Image, FlatList, TouchableOpacity} from 'react-native'
 import {Badge} from 'react-native-paper';
 // import panneau from '../assets/images/panneau_orange.png'
-import Search from '../shoppingpage/Search';
+import Search from './Search';
 import { useNavigation } from '@react-navigation/native';
 
 const Autre = () =>{

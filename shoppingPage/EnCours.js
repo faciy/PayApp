@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import {Badge} from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 // import panneau from '../assets/images/panneau_orange.png'
-import Search from '../shoppingpage/Search'
+import Search from './Search'
 
 const EnCours = () =>{
 

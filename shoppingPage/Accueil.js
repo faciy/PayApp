@@ -2,9 +2,9 @@ import React from 'react'
 import {StyleSheet} from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-import Termine from '../shoppingpage/Termine'
-import Autre from '../shoppingpage/Autre'
-import EnCours from '../shoppingpage/EnCours'
+import Termine from './Termine'
+import Autre from './Autre'
+import EnCours from './EnCours'
 
 const Tab = createMaterialTopTabNavigator();
 

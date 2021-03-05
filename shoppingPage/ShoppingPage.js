@@ -5,7 +5,7 @@ import {
     Text,
     ImageBackground,
 } from 'react-native';
-import Accueil from '../shoppingpage/Accueil'
+import Accueil from './Accueil'
 // import Fond from '../assets/images/Fond.png'
 
 import Icon from 'react-native-vector-icons/Ionicons';
