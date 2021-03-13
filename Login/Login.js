@@ -15,6 +15,7 @@ import delivery from '../assets/images/food-delivery.png'
 
 
 const Login = () => {
+    const [text, setText] = React.useState('');
 
     return (
         <ScrollView style={styles.scrollView}>
@@ -23,7 +24,7 @@ const Login = () => {
                     <Header />
                 </View>
                 <View style={styles.other}>
-                    <Username />
+                    <Username onChangeText={() => setText()} />
                     <Password />
                     <MotDePasse />
                     <Contacter />
